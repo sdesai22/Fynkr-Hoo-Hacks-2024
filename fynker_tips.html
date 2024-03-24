@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<script src="./fetchExample.js"></script>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title> fynkrtips.com</title>
+    <style>
+         h1 {
+            text-align: center;
+            font-size: 18px;
+        }
+		.squeezed-text { 
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;        
+        }
+        nav{
+            display: block;
+            font-size: 24px;
+            background-color: whitesmoke;
+            border: 5px solid black;
+            margin:auto;
+            width: 32%;
+            text-align: center;
+        }
+        body{
+            background-color:darkgrey;
+        }
+        
+        ol{
+            list-style:tahoma;
+        }
+        .heading {
+            font-style:tahoma;
+            font-size: 16px;
+            color: black;
+            text-align: center;
+        }
+         img{
+            width:1450px;
+            margin:auto;
+            height: auto;
+            display: block;
+        }
+        .center{
+            display: block;
+             margin-left: auto;
+             margin-right: auto;
+             width: 35%
+        }
+        body {
+                font-family: tahoma;
+                background-color: darkgrey;
+            }
+            .login-container {
+                width: 300px;
+                margin: 100px auto;
+                padding: 20px;
+                background-color: whitesmoke;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(192, 185, 143, 0.821);
+            }
+            input[type="text"],
+            input[type="password"],
+            input[type="submit"] {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                box-sizing: border-box; /* Include padding and border in element's total width and height */
+            }
+            input[type="submit"] {
+                background-color: lightgreen;
+                color: black;
+                cursor: pointer;
+            }
+            .container {
+            display: flex;
+            align-items: center;
+        }
+        .text {
+            flex: 20;
+            padding: 10px;
+        }
+        .img2 {
+            display: block;
+        }
+        #tips {
+            text-align: center;
+            font-size: 25px;
+            color: black;
+            margin-top: 50px;
+        }
+              
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="fynker_home.html">Home</a> |
+		<a href="fynker_login.html">Login</a> |
+        <a href="fynker_surveypage.html">Survey</a> |
+        <a href="fynker_resultspage.html">Results</a> |
+        <a href="fynker_tips.html">Fynks</a> |  
+    </nav>
+    
+    <div id="tips"></div>
+
+       <script>
+          document.addEventListener('DOMContentLoaded', (event) => {
+            var tips = localStorage.getItem('toop');
+                document.getElementById('tips').innerText = 'Here are your fynks: \n' + tips;
+        });
+       </script>
+
+
+</head>
+<body>

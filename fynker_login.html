@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title> fynkrlogin.com </title>
+    <style>
+         h1 {
+            text-align: center;
+        }
+		
+        nav{
+            display: block;
+            font-size: 24px;
+            background-color: whitesmoke;
+            border: 5px solid black;
+            margin:auto;
+            width: 32%;
+            text-align: center;
+        }
+        body{
+            background-color:darkgrey;
+        }
+        
+        ol{
+            list-style:tahoma;
+        }
+        .heading {
+            font-style:tahoma;
+            font-size: 16px;
+            color: black;
+            text-align: center;
+        }
+        .center{
+            display: block;
+             margin-left: auto;
+             margin-right: auto;
+             width: 35%
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="fynker_home.html">Home</a> |
+		<a href="fynker_login.html">Login</a> |
+        <a href="fynker_surveypage.html">Survey</a> |
+        <a href="fynker_resultspage.html">Results</a> |
+        <a href="fynker_tips.html">Fynks</a> |  
+    </nav>
+   
+    <h3 class="heading"></h3>
+    
+
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Page</title>
+        <style>
+            body {
+                font-family: tahoma;
+                background-color: darkgrey;
+            }
+            .login-container {
+                width: 300px;
+                margin: 100px auto;
+                padding: 20px;
+                background-color: whitesmoke;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(192, 185, 143, 0.821);
+            }
+            input[type="text"],
+            input[type="password"],
+            input[type="submit"] {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                box-sizing: border-box; /* Include padding and border in element's total width and height */
+            }
+            input[type="submit"] {
+                background-color: lightgreen;
+                color: black;
+                cursor: pointer;
+            }
+            .custom-button {
+            position: absolute;
+            top: 45.5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+            width: 300px
+        }
+        </style>
+    </head>
+    <body>
+        <div class="login-container">
+            <h2>Login to Fynkr</h2>
+            <form>
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </body>
+    </html>
+    <p></p>
+    <button class="custom-button" onclick="printResultAndRedirect('login')">Login</button>
+
+</h1>
+    <p id="result"></p>
+
+    <script>
+        function printResultAndRedirect() {
+            window.location.href = 'fynker_surveypage.html'; 
+
+            console.log("The result is: " + result); // This will print the result in the console
+
+
+        }
+    </script>
+   
+
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<script src="./fetchExample.js"></script>
+<html>
+   <head>
+   <meta charset="UTF-8">
+   <title> fynkr.com </title>
+   <style>
+        h1 {
+           text-align:left;
+           font-size: 28px;
+           color: black;
+           height: 100%;
+       }
+       .squeezed-text {
+           height: 100%;
+           margin: 0;
+           display: flex;
+           justify-content: center;
+           align-items: center;       
+       }
+       nav{
+           display: block;
+           font-size: 24px;
+           background-color: whitesmoke;
+           border: 5px solid black;
+           margin:auto;
+           width: 32%;
+           text-align: center;
+       }
+       body{
+           background-color:darkgrey;
+       }
+       h2 {
+               text-align: left;
+               font-size: 28px;
+               color: black;
+               width: 35%;
+           }
+        h3 {
+               text-align: right;
+               font-size: 28px;
+               color: black;
+               width: 35%;
+               position: absolute;
+               top: 60.5%;
+               left: 50%;
+               transform: translate(70%, 200%);
+               font-size: 30px;
+               width: 300px
+         }
+       ol{
+           list-style:tahoma;
+       }
+       .heading {
+           font-style:tahoma;
+           font-size: 16px;
+           color: black;
+           text-align: center;
+       }
+        img{
+           width:1450px;
+           margin:auto;
+           height: auto;
+           display: block;
+       }
+       .center{
+           display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 35%
+       }
+       body {
+               font-family: tahoma;
+               background-color: darkgrey;
+           }
+           
+           .container {
+           display: flex;
+           align-items: center;
+       }
+       .text {
+           flex: 20;
+           padding: 10px;
+       
+       }
+       .custom-button {
+            position: absolute;
+            top: 45.5%;
+            left: 50%;
+            transform: translate(80%, 300%);
+            font-size: 30px;
+            width: 300px
+        }
+          
+   </style>
+</head>
+<body>
+   <nav>
+       <a href="fynker_home.html">Home</a> |
+       <a href="fynker_login.html">Login</a> |
+       <a href="fynker_surveypage.html">Survey</a> |
+       <a href="fynker_resultspage.html">Results</a> |
+       <a href="fynker_tips.html">Fynks</a> | 
+   </nav>
+ 
+
+<p>
+   <p>
+       <img
+         max-width: 100%;
+         height: auto;
+         src= "logof.png" alt="logo"/> </br>
+
+         <div class="container">
+           <div class="text">
+               <h1>Welcome to Fynker!</h1>
+               <h2>Fynkr focuses on creating smart spending habits and innovative solutions to calculate your credit score, aiding you in making smart financial decisions. Our team of personalized financial thinkers is happy to help you track your spending, learn about and manage your credit, and receive other financial tips and insights! Feel free to log in and take our short survey to assess your financial proficiency and identify areas where you may need more assistance to build a stress-free future and excellent credit!</h2>
+               <h3>Finance+Thinker=Fynkr</h3>
+               <p></p>
+               <button class="custom-button" onclick="printResultAndRedirect('Clickhere')">Click Here To Start!</button></p>
+           </div>
+<script>
+    function printResultAndRedirect() {
+            window.location.href = 'fynker_login.html'; 
+
+        }
+</script>
+
+</body>
+</html>

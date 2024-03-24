@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<script src="./fetchExample.js"></script>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title> fynkersurvey.com </title>
+    <style>
+         h1 {
+            text-align: center;
+            
+        }
+		
+        nav{
+            display: block;
+            font-size: 24px;
+            background-color: whitesmoke;
+            border: 5px solid black;
+            margin:auto;
+            width: 32%;
+            text-align: center;
+        }
+        body{
+            background-color:darkgrey;
+        }
+        
+        ol{
+            list-style:tahoma;
+        }
+        .heading {
+            font-style:tahoma;
+            font-size: 16px;
+            color: black;
+            text-align: center;
+        }
+         img{
+            width:1450px;
+            margin:auto;
+            height: auto;
+            display: block;
+        }
+        .center{
+            display: block;
+             margin-left: auto;
+             margin-right: auto;
+             width: 35%
+        }
+        body {
+                font-family: tahoma;
+                background-color: darkgrey;
+            }
+            .login-container {
+                width: 300px;
+                margin: 100px auto;
+                padding: 20px;
+                background-color: whitesmoke;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(192, 185, 143, 0.821);
+            }
+            input[type="text"],
+            input[type="password"],
+            input[type="submit"] {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                box-sizing: border-box; /* Include padding and border in element's total width and height */
+            }
+            input[type="submit"] {
+                background-color: lightgreen;
+                color: black;
+                cursor: pointer;
+            }
+            #resulta {
+            text-align: center;
+            margin-top: 50px;
+            }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="fynker_home.html">Home</a> |
+		<a href="fynker_login.html">Login</a> |
+        <a href="fynker_surveypage.html">Survey</a> |
+        <a href="fynker_resultspage.html">Results</a> |
+        <a href="fynker_tips.html">Fynks</a> |  
+    </nav>
+   
+    <h1 class="heading"></h1>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yes or No Survey</title>
+</head>
+<body>
+    <h1>Quickly fill out this survey to your best knowledge to get an accurate analysis of your credit score. 
+    <p>On average do you think you pay your bills on time?</p>
+    <button onclick="onclickyes()" onclick="answerQuestion('Yes')">Yes</button>
+    <button onclick="onClickno()" onclick="answerQuestion('No')">No</button>
+    <p>How long have you had a credit card?</p>
+    <button onclick="onclickzero()" onclick="answerQuestion('0-2 years')"> 0-2 years</button>
+    <button onclick="onclicktwo()" onclick="answerQuestion('2-4 years')">2-4 years</button>
+    <button onclick="onclickthree()" onclick="answerQuestion('5+ years')">5+ years</button>
+    <p>How many credits cards do you own?</p>
+    <button onclick="onclickown()" onclick="answerQuestion('1')">1</button>
+    <button onclick="onclickowntwo()" onclick="answerQuestion('2-3')">2-3</button>
+    <button onclick="onclickownfour()" onclick="answerQuestion('4-5')">4-5</button>
+    <button onclick="onclickownsix()" onclick="answerQuestion('6+')">6+</button>
+    <p>Do you beleive you use more than 30% of your credit limit?</p>
+    <button onclick="onclicklimit()" onclick="answerQuestion('Yes')">Yes</button>
+    <button onclick="onclicklimitno()" onclick="answerQuestion('No')">No</button>
+    <p>Do you pay your bills all at once per month?</p>
+    <button onclick="onclickbillonceyes()" onclick="answerQuestion('Yes')">Yes</button>
+    <button onclick="onclickbillonceno()" onclick="answerQuestion('No')">No</button>
+    <p>Do you have any missed/failed payments?</p>
+    <button onclick="onclickfailpayment()" onclick="answerQuestion('Yes')">Yes</button>
+    <button onclick="onclicknomissedpayment()" onclick="answerQuestion('No')">No</button>
+    <p>Is yout credit limit greater or equal to $30,000?</p>
+    <button onclick="onclickcreditlimitdol()" onclick="answerQuestion('Yes')">Yes</button>
+    <button onclick="onclickcreditlimitdolno()" onclick="answerQuestion('No')">No</button>
+    <p>What is your yearly income?</p>
+    <button onclick="onclickincome()" onclick="answerQuestion('less then 50k')">less than 50k</button>
+    <button onclick="onclickmidincome()" onclick="answerQuestion('50k-100k')">50k-100k</button>
+    <button onclick="onclickupmidincome()" onclick="answerQuestion('100k-250k')">100k-250k</button>
+    <button onclick="onclickhighincome()" onclick="answerQuestion('250k+')">250k+</button>
+    <p>Do you have any joint accounts?</p>
+    <button onclick="onclickjointyes()" onclick="answerQuestion('Yes')">Yes</button>
+    <button onclick="onclickjointno()" onclick="answerQuestion('No')">No</button>
+    <p>Calculate My Results!</p>
+    <button onclick="farf()" onclick="answerQuestion('Calculate')">Calculate</button>
+    <p>Submit Survey The Survey And See Your Results!</p>
+    <button onclick="printResultAndRedirect('SubmitSurvey')">Submit Survey</button>
+
+</h1>
+    <p id="result"></p>
+
+    <script>
+        function printResultAndRedirect() {
+            // Dummy example of result calculation
+            var result = farf(); // You need to define how to calculate the survey result
+
+            // Log the result to the console before redirecting
+            console.log("The result is: " + result);
+
+            // Store the result in localStorage
+            localStorage.setItem('sav', result);
+            
+
+            // Redirect to the results page
+            window.location.href = 'fynker_resultspage.html';
+
+            function farf() {
+            // Logic to calculate the survey result goes here
+            // For now, we just return a placeholder string
+            return resulta;
+
+             // Dummy example of result calculation
+
+
+            
+        }
+
+        var tips = farfa(); // You need to define how to calculate the survey result
+
+            // Log the result to the console before redirecting
+            console.log("The result is: " + tips);
+
+            // Store the result in localStorage
+            localStorage.setItem('toop', tips);
+            
+
+            function farfa() {
+            // Logic to calculate the survey result goes here
+            // For now, we just return a placeholder string
+            return tippa;
+
+             // Dummy example of result calculation
+
+
+            
+        }
+        }
+        
+    </script>
+    
+
+</body>
+</html>
+
+    
+
+</body>
+</html>
